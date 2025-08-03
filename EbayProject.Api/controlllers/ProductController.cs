@@ -37,7 +37,7 @@ namespace EbayProject.Api.Controllers
             string? ModelID = HttpContext.Request.Form["id"];
             string? ModelName = HttpContext.Request.Form["name"];
         }
-
+        
     }
 
 }
