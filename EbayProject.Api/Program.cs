@@ -1,4 +1,5 @@
 using System.Net;
+using EbayProject.Api.Middleware;
 using EbayProject.Api.models;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,8 @@ string connectionEbay = builder.Configuration.GetConnectionString("ConnectionStr
 builder.Services.AddDbContext<EbayContext>(options =>
     options.UseSqlServer(connectionEbay));
 
+//DI MIDDLE WARE
+builder.Services.AddScoped<BlockIpMiddleware>();
 //DI SERVICE CORS
 builder.Services.AddCors(option =>
 {
@@ -35,6 +38,7 @@ builder.Services.AddCors(option =>
 var app = builder.Build();
 
 //MIDDLEWARE
+
 //Cấu hình middleware bắt lỗi error 
 app.UseExceptionHandler(appBuilder =>
 {
@@ -52,6 +56,8 @@ app.UseExceptionHandler(appBuilder =>
 app.UseCors("allowLocalHost");
 app.UseSwagger();
 app.UseSwaggerUI();
+//SỬ DỤNG MIDDLE WARE TỰ TẠO
+app.UseMiddleware<BlockIpMiddleware>();
 app.MapControllers();
 app.UseHttpsRedirection();
 
@@ -60,5 +66,7 @@ app.UseStaticFiles();
 
 app.UseAuthentication(); //yêu cầu verify token
 app.UseAuthorization(); //yêu cầu verify roles của token
+
+
 
 app.Run();
