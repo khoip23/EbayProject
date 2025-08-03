@@ -19,11 +19,23 @@ string connectionEbay = builder.Configuration.GetConnectionString("ConnectionStr
 builder.Services.AddDbContext<EbayContext>(options =>
     options.UseSqlServer(connectionEbay));
 
+//DI SERVICE CORS
+builder.Services.AddCors(option =>
+{
+    option.AddPolicy("allowLocalHost", builder =>
+    {
+        builder.WithOrigins("http://localhost:5238")
+            .AllowAnyHeader()
+            .WithMethods("GET", "POST") //chỉ cho phép get và post cho domain khác
+            .AllowCredentials();
+    });
+});
+
 
 var app = builder.Build();
 
 //MIDDLEWARE
-//Cấu hình middleware error 
+//Cấu hình middleware bắt lỗi error 
 app.UseExceptionHandler(appBuilder =>
 {
     appBuilder.Run(async context =>
@@ -37,9 +49,13 @@ app.UseExceptionHandler(appBuilder =>
         await context.Response.WriteAsJsonAsync(errorResponse);
     });
 });
-
+app.UseCors("allowLocalHost");
 app.UseSwagger();
 app.UseSwaggerUI();
 app.MapControllers();
 app.UseHttpsRedirection();
+
+//cấu hình các tệp tĩnh
+app.UseStaticFiles();
+
 app.Run();
