@@ -58,4 +58,7 @@ app.UseHttpsRedirection();
 //cấu hình các tệp tĩnh
 app.UseStaticFiles();
 
+app.UseAuthentication(); //yêu cầu verify token
+app.UseAuthorization(); //yêu cầu verify roles của token
+
 app.Run();
