@@ -37,7 +37,12 @@ namespace EbayProject.Api.Controllers
             string? ModelID = HttpContext.Request.Form["id"];
             string? ModelName = HttpContext.Request.Form["name"];
         }
-        
+
+        [HttpPost("PhepChia")]
+        public async Task<IActionResult> PhepChia0(int a, int b)
+        {
+            return Ok(a / b);
+        }
     }
 
 }
