@@ -1,13 +1,13 @@
 //api-controller
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.ObjectPool;
-using System.Data;
 using EbayProject.Api.models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.ObjectPool;
 
 namespace EbayProject.Api.Controllers
 {
@@ -26,11 +26,14 @@ namespace EbayProject.Api.Controllers
         {
             string? idRoute = HttpContext.Request.RouteValues["id"] as string;
             string? tokenHeader = HttpContext.Request.Headers["token"];
-
         }
 
         [HttpPost("GetdemobyID/{id}")]
-        public async Task Getdemo1([FromRoute] string id, [FromHeader] string token, [FromBody] DemoModel models)
+        public async Task Getdemo1(
+            [FromRoute] string id,
+            [FromHeader] string token,
+            [FromBody] DemoModel models
+        )
         {
             string? idRoute = HttpContext.Request.RouteValues["id"] as string;
             string? tokenHeader = HttpContext.Request.Headers["token"];
@@ -44,7 +47,6 @@ namespace EbayProject.Api.Controllers
             return Ok(a / b);
         }
     }
-
 }
 
 //tạo 1 class để demo
