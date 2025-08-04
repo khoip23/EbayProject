@@ -1,14 +1,14 @@
 //api-controller
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.ObjectPool;
-using System.Data;
 using EbayProject.Api.models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.ObjectPool;
 
 namespace EbayProject.Api.Controllers
 {
@@ -16,10 +16,8 @@ namespace EbayProject.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        public UserController()
-        {
+        public UserController() { }
 
-        }
         [HttpGet("getProfile")]
         [Authorize]
         public async Task GetProfile()
