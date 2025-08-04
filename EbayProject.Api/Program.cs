@@ -6,6 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//DI:
+//Service của blazor server app
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
 //DI
 //service controller
 builder.Services.AddControllers();
@@ -67,6 +72,8 @@ app.UseStaticFiles();
 app.UseAuthentication(); //yêu cầu verify token
 app.UseAuthorization(); //yêu cầu verify roles của token
 
-
+//Sử dụng middleware của blazor map file host để làm file chạy đầu tiên
+app.MapBlazorHub(); 
+app.MapFallbackToPage("/_Host");
 
 app.Run();
