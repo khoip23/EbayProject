@@ -320,3 +320,14 @@ C:\Study\EbayProject\EbayProject\EbayProject.Api\obj\Debug\net9.0\refint\EbayPro
 C:\Study\EbayProject\EbayProject\EbayProject.Api\obj\Debug\net9.0\EbayProject.Api.pdb
 C:\Study\EbayProject\EbayProject\EbayProject.Api\obj\Debug\net9.0\EbayProject.Api.genruntimeconfig.cache
 C:\Study\EbayProject\EbayProject\EbayProject.Api\obj\Debug\net9.0\ref\EbayProject.Api.dll
+C:\Study\EbayProject\EbayProject.Api\obj\Debug\net9.0\EbayProject.Api.RazorAssemblyInfo.cache
+C:\Study\EbayProject\EbayProject.Api\obj\Debug\net9.0\EbayProject.Api.RazorAssemblyInfo.cs
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Study\EbayProject\EbayProject.Api\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
