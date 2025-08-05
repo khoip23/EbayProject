@@ -16,7 +16,7 @@ namespace EbayProject.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthenticationDemoController(EbayContext _context) : ControllerBase
+    public class AuthenticationDemoController(EbayContext _context, JwtAuthService _jwt) : ControllerBase
     {
         [Authorize(Roles = "Admin")] //filter
         [HttpGet("getAllUser")]
@@ -50,6 +50,41 @@ namespace EbayProject.Api.Controllers
             _context.Users.Add(newUser);
             _context.SaveChanges();
             return Ok("Đăng ký thành công!");
+        }
+
+        [HttpPost("Login")]
+        public async Task<ActionResult> Login([FromBody] UserLoginVM model)
+        {
+            //B1: Verify password
+            User? us = _context.Users.SingleOrDefault(u => u.Email == model.userNameOrEmail || u.Username == model.userNameOrEmail);
+            if (us == null)
+            {
+                return BadRequest("Tài khoản hoặc email không tồn tại!");
+            }
+            if (!PasswordHelper.VerifyPassword(model.password, us.PasswordHash))
+            {
+                //Đăng nhập thật bại
+                return BadRequest("Sai password!");
+            }
+            //đúng thì tạo token từ user và role
+            string token = _jwt.GenerateToken(us);
+
+            //B2: Tạo token từ thông tin db
+            var res = new
+            {
+                token = token
+            };
+            //Cấp token qua cookie client 
+            HttpContext.Response.Cookies.Append("token", token, new CookieOptions()
+            {
+                Expires = DateTime.Now.AddDays(7),
+                HttpOnly = true,
+                Secure = true, //chỉ gửi cookie qua https
+                SameSite = SameSiteMode.Strict //Ngăn CSRF
+            });
+
+
+            return Ok(res);
         }
     }
 
