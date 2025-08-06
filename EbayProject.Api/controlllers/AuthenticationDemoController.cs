@@ -83,8 +83,16 @@ namespace EbayProject.Api.Controllers
                 SameSite = SameSiteMode.Strict //Ngăn CSRF
             });
 
-
             return Ok(res);
+        }
+
+        [HttpGet("GetCookieClient")]
+        public async Task<IActionResult> GetCookieClient()
+        {
+            string cookie = "";
+            bool getCookie = HttpContext.Request.Cookies.TryGetValue(cookie, out cookie);
+
+            return Ok(cookie);
         }
     }
 
