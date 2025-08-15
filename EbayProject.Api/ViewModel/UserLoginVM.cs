@@ -11,3 +11,8 @@ public class UserLoginVM
     public string password { get; set; }
 
 }
+
+public class UserLoginResultVM
+{
+    public string token { get; set; }
+}

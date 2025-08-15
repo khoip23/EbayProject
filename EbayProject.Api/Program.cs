@@ -1,6 +1,8 @@
 using System.Net;
 using System.Security.Claims;
 using System.Text;
+using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.Authorization;
 using EbayProject.Api.Helpers;
 using EbayProject.Api.Middleware;
 using EbayProject.Api.models;
@@ -9,6 +11,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -113,6 +116,15 @@ builder.Services.AddCors(option =>
     });
 });
 
+//Add http client
+builder.Services.AddHttpClient();
+//Add blazor storage
+builder.Services.AddBlazoredLocalStorage();
+
+//Custom phân quyền blazor page
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+
+
 
 var app = builder.Build();
 
@@ -147,7 +159,7 @@ app.UseAuthentication(); //yêu cầu verify token
 app.UseAuthorization(); //yêu cầu verify roles của token
 
 //Sử dụng middleware của blazor map file host để làm file chạy đầu tiên
-app.MapBlazorHub(); 
+app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();

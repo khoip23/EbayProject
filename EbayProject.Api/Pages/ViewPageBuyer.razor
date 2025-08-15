@@ -1,0 +1,7 @@
+@page "/view-buyer"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Roles = "Buyer")]
+
+<div>
+    Hello buyer
+</div>
