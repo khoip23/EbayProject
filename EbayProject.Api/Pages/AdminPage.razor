@@ -1,0 +1,7 @@
+@page "/view-admin"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Roles = "Admin")]
+
+<div>
+    Hello Admin
+</div>

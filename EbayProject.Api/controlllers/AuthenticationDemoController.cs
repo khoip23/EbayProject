@@ -94,6 +94,33 @@ namespace EbayProject.Api.Controllers
 
             return Ok(cookie);
         }
+        [HttpPost("DemoFilter")]
+        [DemoFilter(name = "abc")]
+        public IActionResult DemoFilter([FromBody] UserLoginVM model) //model binding
+        {
+            //Action excuting
+
+            //Action handler 
+            Console.WriteLine($@"{JsonSerializer.Serialize(model)}");
+
+            //Action excuted
+            UserLoginVM res = model;
+            return Ok(res);
+        }
+
+        [HttpPost("DemoFilterAsync")]
+        [DemoFilterAsync(name = "abc")]
+        public async Task<IActionResult> DemoFilterAsync([FromBody] UserLoginVM model) //model binding
+        {
+            //Action excuting
+
+            //Action handler 
+            Console.WriteLine($@"{JsonSerializer.Serialize(model)}");
+
+            //Action excuted
+            UserLoginVM res = model;
+            return Ok(res);
+        }
     }
 
 }
