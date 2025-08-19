@@ -1,0 +1,977 @@
+2025-08-18 16:59:04.170 +07:00 [DBG] Initializing Razor view compiler with compiled view: '/Pages/_Host.cshtml'.
+2025-08-18 16:59:04.261 +07:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-08-18 16:59:04.321 +07:00 [INF] User profile is available. Using 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 16:59:04.403 +07:00 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2025-08-18 16:59:04.404 +07:00 [DBG] Registered SignalR Protocol: blazorpack, implemented by Microsoft.AspNetCore.Components.Server.BlazorPack.BlazorPackHubProtocol.
+2025-08-18 16:59:04.498 +07:00 [DBG] Hosting starting
+2025-08-18 16:59:04.506 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-6beb3dba-f0b9-4788-a7ad-91ac7824012b.xml'.
+2025-08-18 16:59:04.508 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-c5f1c2cd-146a-4783-b530-685976f5df9f.xml'.
+2025-08-18 16:59:04.508 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-f48ef8b0-fb3f-48b9-9eff-636ca32f3899.xml'.
+2025-08-18 16:59:04.516 +07:00 [DBG] Found key {6beb3dba-f0b9-4788-a7ad-91ac7824012b}.
+2025-08-18 16:59:04.523 +07:00 [DBG] Found key {c5f1c2cd-146a-4783-b530-685976f5df9f}.
+2025-08-18 16:59:04.524 +07:00 [DBG] Found key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899}.
+2025-08-18 16:59:04.531 +07:00 [DBG] Considering key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} with expiration date 2025-09-07 05:27:32Z as default key.
+2025-08-18 16:59:04.534 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-18 16:59:04.537 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-08-18 16:59:04.539 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-18 16:59:04.544 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-08-18 16:59:04.545 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-08-18 16:59:04.547 +07:00 [DBG] Using key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} as the default key.
+2025-08-18 16:59:04.548 +07:00 [DBG] Key ring with default key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} was loaded during application startup.
+2025-08-18 16:59:04.551 +07:00 [DBG] Middleware loaded
+2025-08-18 16:59:04.553 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16481 B).
+2025-08-18 16:59:04.555 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-08-18 16:59:04.596 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-08-18 16:59:04.598 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-08-18 16:59:04.599 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-08-18 16:59:04.625 +07:00 [INF] Now listening on: http://localhost:5238
+2025-08-18 16:59:04.626 +07:00 [DBG] Loaded hosting startup assembly EbayProject.Api
+2025-08-18 16:59:04.626 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-08-18 16:59:04.626 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 16:59:04.626 +07:00 [INF] Hosting environment: Development
+2025-08-18 16:59:04.626 +07:00 [INF] Content root path: C:\Study\EbayProject\EbayProject\EbayProject.Api
+2025-08-18 16:59:04.630 +07:00 [DBG] Hosting started
+2025-08-18 16:59:04.792 +07:00 [DBG] Connection id "0HNEU7NEORST8" accepted.
+2025-08-18 16:59:04.795 +07:00 [DBG] Connection id "0HNEU7NEORST8" started.
+2025-08-18 16:59:04.869 +07:00 [DBG] Connection id "0HNEU7NEORST9" accepted.
+2025-08-18 16:59:04.869 +07:00 [DBG] Connection id "0HNEU7NEORST9" started.
+2025-08-18 16:59:04.970 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 16:59:04.982 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 16:59:04.982 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 16:59:04.984 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 16.1105ms
+2025-08-18 16:59:05.056 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 16:59:05.121 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 16:59:05.130 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 16:59:05.134 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 16:59:05.138 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 16:59:05.184 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 16:59:05.185 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 16:59:05.419 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 16:59:05.421 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 364.924ms
+2025-08-18 16:59:41.918 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5238/api/AuthenticationDemo/DemoSeriLog - null 0
+2025-08-18 16:59:41.921 +07:00 [DBG] 2 candidate(s) found for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 16:59:41.922 +07:00 [DBG] Endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)' with route pattern 'api/AuthenticationDemo/DemoSeriLog' is valid for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 16:59:41.923 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 16:59:41.937 +07:00 [DBG] Request matched endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 16:59:41.944 +07:00 [DBG] The request has an origin header: 'http://localhost:5238'.
+2025-08-18 16:59:41.945 +07:00 [INF] CORS policy execution successful.
+2025-08-18 16:59:42.262 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-08-18 16:59:43.169 +07:00 [DBG] No relationship from 'Rating' to 'User' has been configured by convention because there are multiple properties on one entity type - {'RatedUser', 'Rater'} that could be matched with the properties on the other entity type - {'RatingRatedUsers', 'RatingRaters'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 16:59:43.224 +07:00 [DBG] No relationship from 'User' to 'Rating' has been configured by convention because there are multiple properties on one entity type - {'RatingRatedUsers', 'RatingRaters'} that could be matched with the properties on the other entity type - {'RatedUser', 'Rater'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 16:59:43.919 +07:00 [DBG] No relationship from 'Rating' to 'User' has been configured by convention because there are multiple properties on one entity type - {'RatedUser', 'Rater'} that could be matched with the properties on the other entity type - {'RatingRatedUsers', 'RatingRaters'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 16:59:43.925 +07:00 [DBG] No relationship from 'User' to 'Rating' has been configured by convention because there are multiple properties on one entity type - {'RatingRatedUsers', 'RatingRaters'} that could be matched with the properties on the other entity type - {'RatedUser', 'Rater'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 16:59:44.054 +07:00 [DBG] The index {'UserId'} was not created on entity type 'UserRole' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-08-18 16:59:44.818 +07:00 [DBG] Entity Framework Core 9.0.7 initialized 'EbayContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.7' with options: EngineType=SqlServer 
+2025-08-18 16:59:45.013 +07:00 [DBG] Compiling query expression: 
+'DbSet<ConnectionCountLog>()
+    .SingleOrDefault(n => n.IpAddress == __clientIp_0 && n.ConnectionTime.HasValue && n.ConnectionTime >= __today_1 && n.ConnectionTime < __tomorrow_2)'
+2025-08-18 16:59:45.863 +07:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<ConnectionCountLog>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ConnectionCountLog.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ConnectionCountLog.ConnectionCount (int?), 1], [Property: ConnectionCountLog.ConnectionTime (DateTime?) ValueGenerated.OnAdd, 2], [Property: ConnectionCountLog.CreatedAt (DateTime?) ValueGenerated.OnAdd, 3], [Property: ConnectionCountLog.IpAddress (string) Required MaxLength(45), 4], [Property: ConnectionCountLog.UpdatedAt (DateTime?), 5] }
+        SELECT TOP(2) c.Id, c.ConnectionCount, c.ConnectionTime, c.CreatedAt, c.IpAddress, c.UpdatedAt
+        FROM ConnectionCountLog AS c
+        WHERE (((c.IpAddress == @__clientIp_0) && c.ConnectionTime IS NOT NULL) && (c.ConnectionTime >= @__today_1)) && (c.ConnectionTime < @__tomorrow_2)) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ConnectionCountLog.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ConnectionCountLog.ConnectionCount (int?), 1], [Property: ConnectionCountLog.ConnectionTime (DateTime?) ValueGenerated.OnAdd, 2], [Property: ConnectionCountLog.CreatedAt (DateTime?) ValueGenerated.OnAdd, 3], [Property: ConnectionCountLog.IpAddress (string) Required MaxLength(45), 4], [Property: ConnectionCountLog.UpdatedAt (DateTime?), 5] }
+        SELECT TOP(2) c.Id, c.ConnectionCount, c.ConnectionTime, c.CreatedAt, c.IpAddress, c.UpdatedAt
+        FROM ConnectionCountLog AS c
+        WHERE (((c.IpAddress == @__clientIp_0) && c.ConnectionTime IS NOT NULL) && (c.ConnectionTime >= @__today_1)) && (c.ConnectionTime < @__tomorrow_2), 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        ConnectionCountLog entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            ConnectionCountLog instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(ConnectionCountLog);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: ConnectionCountLog.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (ConnectionCountLog)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: ConnectionCountLog | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: ConnectionCountLog | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog")]: 
+                        {
+                            return 
+                            {
+                                ConnectionCountLog instance;
+                                instance = new ConnectionCountLog();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<ConnectionCount>k__BackingField = dataReader.IsDBNull(1) ? default(int?) : (int?)dataReader.GetInt32(1);
+                                instance.<ConnectionTime>k__BackingField = dataReader.IsDBNull(2) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(2);
+                                instance.<CreatedAt>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                instance.<IpAddress>k__BackingField = dataReader.GetString(4);
+                                instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(5) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(5);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: ConnectionCountLog | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(ConnectionCountLog)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: EbayProject.Api.models.EbayContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)
+    .SingleOrDefault()'
+2025-08-18 16:59:45.986 +07:00 [DBG] Creating DbConnection.
+2025-08-18 16:59:46.084 +07:00 [DBG] Created DbConnection. (93ms).
+2025-08-18 16:59:46.090 +07:00 [DBG] Opening connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:46.547 +07:00 [DBG] Opened connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:46.553 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-08-18 16:59:46.583 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (22ms).
+2025-08-18 16:59:46.608 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (55ms).
+2025-08-18 16:59:46.631 +07:00 [DBG] Executing DbCommand [Parameters=[@__clientIp_0='?' (Size = 45), @__today_1='?' (DbType = DateTime), @__tomorrow_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[ConnectionCount], [c].[ConnectionTime], [c].[CreatedAt], [c].[IpAddress], [c].[UpdatedAt]
+FROM [ConnectionCountLog] AS [c]
+WHERE [c].[IpAddress] = @__clientIp_0 AND [c].[ConnectionTime] IS NOT NULL AND [c].[ConnectionTime] >= @__today_1 AND [c].[ConnectionTime] < @__tomorrow_2
+2025-08-18 16:59:46.729 +07:00 [INF] Executed DbCommand (104ms) [Parameters=[@__clientIp_0='?' (Size = 45), @__today_1='?' (DbType = DateTime), @__tomorrow_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[ConnectionCount], [c].[ConnectionTime], [c].[CreatedAt], [c].[IpAddress], [c].[UpdatedAt]
+FROM [ConnectionCountLog] AS [c]
+WHERE [c].[IpAddress] = @__clientIp_0 AND [c].[ConnectionTime] IS NOT NULL AND [c].[ConnectionTime] >= @__today_1 AND [c].[ConnectionTime] < @__tomorrow_2
+2025-08-18 16:59:46.740 +07:00 [DBG] Closing data reader to 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:46.756 +07:00 [DBG] A data reader for 'eBayDB' on server '103.97.125.207,1433' is being disposed after spending 16ms reading results.
+2025-08-18 16:59:46.763 +07:00 [DBG] Closing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:46.777 +07:00 [DBG] Closed connection to database 'eBayDB' on server '103.97.125.207,1433' (13ms).
+2025-08-18 16:59:46.868 +07:00 [DBG] 'EbayContext' generated a temporary value for the property 'ConnectionCountLog.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 16:59:47.035 +07:00 [DBG] Context 'EbayContext' started tracking 'ConnectionCountLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 16:59:47.044 +07:00 [DBG] SaveChanges starting for 'EbayContext'.
+2025-08-18 16:59:47.053 +07:00 [DBG] DetectChanges starting for 'EbayContext'.
+2025-08-18 16:59:47.108 +07:00 [DBG] DetectChanges completed for 'EbayContext'.
+2025-08-18 16:59:47.260 +07:00 [DBG] Opening connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:47.269 +07:00 [DBG] Opened connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:47.290 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-08-18 16:59:47.290 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-08-18 16:59:47.292 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2025-08-18 16:59:47.295 +07:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 45), @p4='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ConnectionCountLog] ([ConnectionCount], [ConnectionTime], [CreatedAt], [IpAddress], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-08-18 16:59:47.389 +07:00 [INF] Executed DbCommand (94ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 45), @p4='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ConnectionCountLog] ([ConnectionCount], [ConnectionTime], [CreatedAt], [IpAddress], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-08-18 16:59:47.439 +07:00 [DBG] The foreign key property 'ConnectionCountLog.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-08-18 16:59:47.469 +07:00 [DBG] Closing data reader to 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:47.473 +07:00 [DBG] A data reader for 'eBayDB' on server '103.97.125.207,1433' is being disposed after spending 83ms reading results.
+2025-08-18 16:59:47.482 +07:00 [DBG] Closing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:47.485 +07:00 [DBG] Closed connection to database 'eBayDB' on server '103.97.125.207,1433' (1ms).
+2025-08-18 16:59:47.521 +07:00 [DBG] An entity of type 'ConnectionCountLog' tracked by 'EbayContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 16:59:47.529 +07:00 [DBG] SaveChanges completed for 'EbayContext' with 1 entities written to the database.
+2025-08-18 16:59:47.534 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 16:59:47.537 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-08-18 16:59:47.730 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-18 16:59:47.740 +07:00 [INF] Executing endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 16:59:47.785 +07:00 [INF] Route matched with {action = "DemoLog", controller = "AuthenticationDemo", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DemoLog() on controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api).
+2025-08-18 16:59:47.789 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-08-18 16:59:47.790 +07:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-08-18 16:59:47.792 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-08-18 16:59:47.793 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-08-18 16:59:47.793 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-08-18 16:59:47.799 +07:00 [DBG] Executing controller factory for controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api)
+2025-08-18 16:59:47.803 +07:00 [DBG] Executed controller factory for controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api)
+2025-08-18 16:59:47.813 +07:00 [INF] ::1 - truy cập
+2025-08-18 16:59:47.823 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-08-18 16:59:47.833 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-08-18 16:59:47.833 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-08-18 16:59:47.834 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-08-18 16:59:47.837 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-08-18 16:59:47.838 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-08-18 16:59:47.855 +07:00 [INF] Executed action EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api) in 50.5816ms
+2025-08-18 16:59:47.855 +07:00 [INF] Executed endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 16:59:47.863 +07:00 [INF] HTTP POST /api/AuthenticationDemo/DemoSeriLog responded 200 in 118.6761 ms
+2025-08-18 16:59:47.873 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 16:59:47.879 +07:00 [DBG] 'EbayContext' disposed.
+2025-08-18 16:59:47.890 +07:00 [DBG] Disposing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 16:59:47.894 +07:00 [DBG] Disposed connection to database '' on server '' (4ms).
+2025-08-18 16:59:47.895 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5238/api/AuthenticationDemo/DemoSeriLog - 200 null text/plain; charset=utf-8 5977.4493ms
+2025-08-18 16:59:53.856 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 16:59:53.863 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 16:59:53.863 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 16:59:53.864 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 16:59:53.864 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 16:59:54.030 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 16:59:54.047 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 16:59:54.048 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 16:59:54.048 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 191.5687ms
+2025-08-18 16:59:54.057 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 16:59:54.058 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 16:59:54.059 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 16:59:54.059 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 2.0735ms
+2025-08-18 16:59:54.277 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 16:59:54.278 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 16:59:54.279 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 16:59:54.279 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 16:59:54.279 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 16:59:54.299 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 16:59:54.299 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.4133ms
+2025-08-18 17:00:01.195 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:00:01.196 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:00:01.196 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:00:01.196 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:00:01.196 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:01.197 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:00:01.198 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:00:01.198 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 17:00:01.198 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 3.1885ms
+2025-08-18 17:00:01.252 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:00:01.253 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:00:01.253 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 17:00:01.254 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 1.549ms
+2025-08-18 17:00:01.488 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:00:01.488 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:01.488 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:01.488 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:01.488 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:01.491 +07:00 [DBG] Connection id "0HNEU7NEORST8" completed keep alive response.
+2025-08-18 17:00:01.491 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.7398ms
+2025-08-18 17:00:27.610 +07:00 [DBG] Initializing Razor view compiler with compiled view: '/Pages/_Host.cshtml'.
+2025-08-18 17:00:27.689 +07:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-08-18 17:00:27.715 +07:00 [INF] User profile is available. Using 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 17:00:27.798 +07:00 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2025-08-18 17:00:27.799 +07:00 [DBG] Registered SignalR Protocol: blazorpack, implemented by Microsoft.AspNetCore.Components.Server.BlazorPack.BlazorPackHubProtocol.
+2025-08-18 17:00:27.889 +07:00 [DBG] Hosting starting
+2025-08-18 17:00:27.899 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-6beb3dba-f0b9-4788-a7ad-91ac7824012b.xml'.
+2025-08-18 17:00:27.901 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-c5f1c2cd-146a-4783-b530-685976f5df9f.xml'.
+2025-08-18 17:00:27.901 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-f48ef8b0-fb3f-48b9-9eff-636ca32f3899.xml'.
+2025-08-18 17:00:27.908 +07:00 [DBG] Found key {6beb3dba-f0b9-4788-a7ad-91ac7824012b}.
+2025-08-18 17:00:27.913 +07:00 [DBG] Found key {c5f1c2cd-146a-4783-b530-685976f5df9f}.
+2025-08-18 17:00:27.914 +07:00 [DBG] Found key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899}.
+2025-08-18 17:00:27.919 +07:00 [DBG] Considering key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} with expiration date 2025-09-07 05:27:32Z as default key.
+2025-08-18 17:00:27.921 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-18 17:00:27.922 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-08-18 17:00:27.924 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-18 17:00:27.929 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-08-18 17:00:27.930 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-08-18 17:00:27.931 +07:00 [DBG] Using key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} as the default key.
+2025-08-18 17:00:27.931 +07:00 [DBG] Key ring with default key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} was loaded during application startup.
+2025-08-18 17:00:27.935 +07:00 [DBG] Middleware loaded
+2025-08-18 17:00:27.937 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16481 B).
+2025-08-18 17:00:27.938 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-08-18 17:00:27.989 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-08-18 17:00:27.992 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-08-18 17:00:27.994 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-08-18 17:00:28.008 +07:00 [INF] Now listening on: http://localhost:5238
+2025-08-18 17:00:28.009 +07:00 [DBG] Loaded hosting startup assembly EbayProject.Api
+2025-08-18 17:00:28.009 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-08-18 17:00:28.009 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 17:00:28.009 +07:00 [INF] Hosting environment: Development
+2025-08-18 17:00:28.010 +07:00 [INF] Content root path: C:\Study\EbayProject\EbayProject\EbayProject.Api
+2025-08-18 17:00:28.013 +07:00 [DBG] Hosting started
+2025-08-18 17:00:28.030 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" accepted.
+2025-08-18 17:00:28.031 +07:00 [DBG] Connection id "0HNEU7O7IM3UB" accepted.
+2025-08-18 17:00:28.031 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" started.
+2025-08-18 17:00:28.031 +07:00 [DBG] Connection id "0HNEU7O7IM3UB" started.
+2025-08-18 17:00:28.064 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:00:28.084 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:00:28.086 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:00:28.089 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:00:28.091 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:28.162 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:00:28.170 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:00:28.171 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:28.172 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 109.735ms
+2025-08-18 17:00:28.196 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:00:28.199 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:00:28.199 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:28.200 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 4.0263ms
+2025-08-18 17:00:28.256 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:00:28.259 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:28.259 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:28.259 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:28.260 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:28.267 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:00:28.268 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:00:28.393 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:28.393 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 136.7043ms
+2025-08-18 17:00:33.675 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5238/api/AuthenticationDemo/DemoSeriLog - null 0
+2025-08-18 17:00:33.676 +07:00 [DBG] 2 candidate(s) found for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 17:00:33.676 +07:00 [DBG] Endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)' with route pattern 'api/AuthenticationDemo/DemoSeriLog' is valid for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 17:00:33.676 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 17:00:33.682 +07:00 [DBG] Request matched endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 17:00:33.686 +07:00 [DBG] The request has an origin header: 'http://localhost:5238'.
+2025-08-18 17:00:33.686 +07:00 [INF] CORS policy execution successful.
+2025-08-18 17:00:33.821 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-08-18 17:00:34.189 +07:00 [DBG] No relationship from 'Rating' to 'User' has been configured by convention because there are multiple properties on one entity type - {'RatedUser', 'Rater'} that could be matched with the properties on the other entity type - {'RatingRatedUsers', 'RatingRaters'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 17:00:34.222 +07:00 [DBG] No relationship from 'User' to 'Rating' has been configured by convention because there are multiple properties on one entity type - {'RatingRatedUsers', 'RatingRaters'} that could be matched with the properties on the other entity type - {'RatedUser', 'Rater'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 17:00:34.487 +07:00 [DBG] No relationship from 'Rating' to 'User' has been configured by convention because there are multiple properties on one entity type - {'RatedUser', 'Rater'} that could be matched with the properties on the other entity type - {'RatingRatedUsers', 'RatingRaters'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 17:00:34.489 +07:00 [DBG] No relationship from 'User' to 'Rating' has been configured by convention because there are multiple properties on one entity type - {'RatingRatedUsers', 'RatingRaters'} that could be matched with the properties on the other entity type - {'RatedUser', 'Rater'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.
+2025-08-18 17:00:34.547 +07:00 [DBG] The index {'UserId'} was not created on entity type 'UserRole' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-08-18 17:00:34.834 +07:00 [DBG] Entity Framework Core 9.0.7 initialized 'EbayContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.7' with options: EngineType=SqlServer 
+2025-08-18 17:00:34.911 +07:00 [DBG] Compiling query expression: 
+'DbSet<ConnectionCountLog>()
+    .SingleOrDefault(n => n.IpAddress == __clientIp_0 && n.ConnectionTime.HasValue && n.ConnectionTime >= __today_1 && n.ConnectionTime < __tomorrow_2)'
+2025-08-18 17:00:35.771 +07:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<ConnectionCountLog>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ConnectionCountLog.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ConnectionCountLog.ConnectionCount (int?), 1], [Property: ConnectionCountLog.ConnectionTime (DateTime?) ValueGenerated.OnAdd, 2], [Property: ConnectionCountLog.CreatedAt (DateTime?) ValueGenerated.OnAdd, 3], [Property: ConnectionCountLog.IpAddress (string) Required MaxLength(45), 4], [Property: ConnectionCountLog.UpdatedAt (DateTime?), 5] }
+        SELECT TOP(2) c.Id, c.ConnectionCount, c.ConnectionTime, c.CreatedAt, c.IpAddress, c.UpdatedAt
+        FROM ConnectionCountLog AS c
+        WHERE (((c.IpAddress == @__clientIp_0) && c.ConnectionTime IS NOT NULL) && (c.ConnectionTime >= @__today_1)) && (c.ConnectionTime < @__tomorrow_2)) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ConnectionCountLog.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ConnectionCountLog.ConnectionCount (int?), 1], [Property: ConnectionCountLog.ConnectionTime (DateTime?) ValueGenerated.OnAdd, 2], [Property: ConnectionCountLog.CreatedAt (DateTime?) ValueGenerated.OnAdd, 3], [Property: ConnectionCountLog.IpAddress (string) Required MaxLength(45), 4], [Property: ConnectionCountLog.UpdatedAt (DateTime?), 5] }
+        SELECT TOP(2) c.Id, c.ConnectionCount, c.ConnectionTime, c.CreatedAt, c.IpAddress, c.UpdatedAt
+        FROM ConnectionCountLog AS c
+        WHERE (((c.IpAddress == @__clientIp_0) && c.ConnectionTime IS NOT NULL) && (c.ConnectionTime >= @__today_1)) && (c.ConnectionTime < @__tomorrow_2), 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        ConnectionCountLog entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            ConnectionCountLog instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(ConnectionCountLog);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: ConnectionCountLog.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (ConnectionCountLog)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: ConnectionCountLog | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: ConnectionCountLog | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog")]: 
+                        {
+                            return 
+                            {
+                                ConnectionCountLog instance;
+                                instance = new ConnectionCountLog();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<ConnectionCount>k__BackingField = dataReader.IsDBNull(1) ? default(int?) : (int?)dataReader.GetInt32(1);
+                                instance.<ConnectionTime>k__BackingField = dataReader.IsDBNull(2) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(2);
+                                instance.<CreatedAt>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                instance.<IpAddress>k__BackingField = dataReader.GetString(4);
+                                instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(5) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(5);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: ConnectionCountLog | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("EbayProject.Api.models.ConnectionCountLog")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(ConnectionCountLog)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: EbayProject.Api.models.EbayContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)
+    .SingleOrDefault()'
+2025-08-18 17:00:35.885 +07:00 [DBG] Creating DbConnection.
+2025-08-18 17:00:35.934 +07:00 [DBG] Created DbConnection. (43ms).
+2025-08-18 17:00:35.940 +07:00 [DBG] Opening connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:36.343 +07:00 [DBG] Opened connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:36.350 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-08-18 17:00:36.369 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (10ms).
+2025-08-18 17:00:36.391 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (42ms).
+2025-08-18 17:00:36.416 +07:00 [DBG] Executing DbCommand [Parameters=[@__clientIp_0='?' (Size = 45), @__today_1='?' (DbType = DateTime), @__tomorrow_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[ConnectionCount], [c].[ConnectionTime], [c].[CreatedAt], [c].[IpAddress], [c].[UpdatedAt]
+FROM [ConnectionCountLog] AS [c]
+WHERE [c].[IpAddress] = @__clientIp_0 AND [c].[ConnectionTime] IS NOT NULL AND [c].[ConnectionTime] >= @__today_1 AND [c].[ConnectionTime] < @__tomorrow_2
+2025-08-18 17:00:36.510 +07:00 [INF] Executed DbCommand (98ms) [Parameters=[@__clientIp_0='?' (Size = 45), @__today_1='?' (DbType = DateTime), @__tomorrow_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[ConnectionCount], [c].[ConnectionTime], [c].[CreatedAt], [c].[IpAddress], [c].[UpdatedAt]
+FROM [ConnectionCountLog] AS [c]
+WHERE [c].[IpAddress] = @__clientIp_0 AND [c].[ConnectionTime] IS NOT NULL AND [c].[ConnectionTime] >= @__today_1 AND [c].[ConnectionTime] < @__tomorrow_2
+2025-08-18 17:00:36.602 +07:00 [DBG] Context 'EbayContext' started tracking 'ConnectionCountLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 17:00:36.683 +07:00 [DBG] Closing data reader to 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:36.703 +07:00 [DBG] A data reader for 'eBayDB' on server '103.97.125.207,1433' is being disposed after spending 179ms reading results.
+2025-08-18 17:00:36.708 +07:00 [DBG] Closing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:36.723 +07:00 [DBG] Closed connection to database 'eBayDB' on server '103.97.125.207,1433' (15ms).
+2025-08-18 17:00:36.731 +07:00 [DBG] SaveChanges starting for 'EbayContext'.
+2025-08-18 17:00:36.738 +07:00 [DBG] DetectChanges starting for 'EbayContext'.
+2025-08-18 17:00:36.802 +07:00 [DBG] The unchanged property 'ConnectionCountLog.ConnectionCount' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-08-18 17:00:36.822 +07:00 [DBG] An entity of type 'ConnectionCountLog' tracked by 'EbayContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 17:00:36.848 +07:00 [DBG] DetectChanges completed for 'EbayContext'.
+2025-08-18 17:00:36.976 +07:00 [DBG] Opening connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:36.984 +07:00 [DBG] Opened connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:36.998 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-08-18 17:00:36.998 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-08-18 17:00:36.998 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2025-08-18 17:00:37.000 +07:00 [DBG] Executing DbCommand [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [ConnectionCountLog] SET [ConnectionCount] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-08-18 17:00:37.044 +07:00 [INF] Executed DbCommand (44ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [ConnectionCountLog] SET [ConnectionCount] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-08-18 17:00:37.071 +07:00 [DBG] Closing data reader to 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:37.076 +07:00 [DBG] A data reader for 'eBayDB' on server '103.97.125.207,1433' is being disposed after spending 31ms reading results.
+2025-08-18 17:00:37.084 +07:00 [DBG] Closing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:37.086 +07:00 [DBG] Closed connection to database 'eBayDB' on server '103.97.125.207,1433' (1ms).
+2025-08-18 17:00:37.100 +07:00 [DBG] An entity of type 'ConnectionCountLog' tracked by 'EbayContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 17:00:37.105 +07:00 [DBG] SaveChanges completed for 'EbayContext' with 1 entities written to the database.
+2025-08-18 17:00:37.108 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 17:00:37.111 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-08-18 17:00:37.167 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-18 17:00:37.175 +07:00 [INF] Executing endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 17:00:37.202 +07:00 [INF] Route matched with {action = "DemoLog", controller = "AuthenticationDemo", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DemoLog() on controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api).
+2025-08-18 17:00:37.206 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-08-18 17:00:37.206 +07:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-08-18 17:00:37.209 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-08-18 17:00:37.209 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-08-18 17:00:37.210 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-08-18 17:00:37.217 +07:00 [DBG] Executing controller factory for controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api)
+2025-08-18 17:00:37.218 +07:00 [DBG] Executed controller factory for controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api)
+2025-08-18 17:00:37.225 +07:00 [INF] ::1 - truy cập
+2025-08-18 17:00:37.233 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-08-18 17:00:37.238 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-08-18 17:00:37.239 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-08-18 17:00:37.239 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-08-18 17:00:37.242 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-08-18 17:00:37.243 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-08-18 17:00:37.257 +07:00 [INF] Executed action EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api) in 37.65ms
+2025-08-18 17:00:37.258 +07:00 [INF] Executed endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 17:00:37.264 +07:00 [INF] HTTP POST /api/AuthenticationDemo/DemoSeriLog responded 200 in 86.1369 ms
+2025-08-18 17:00:37.271 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:37.276 +07:00 [DBG] 'EbayContext' disposed.
+2025-08-18 17:00:37.287 +07:00 [DBG] Disposing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:00:37.290 +07:00 [DBG] Disposed connection to database '' on server '' (3ms).
+2025-08-18 17:00:37.291 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5238/api/AuthenticationDemo/DemoSeriLog - 200 null text/plain; charset=utf-8 3615.4855ms
+2025-08-18 17:00:40.384 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:00:40.385 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:00:40.386 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:00:40.386 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:00:40.387 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:40.388 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:00:40.389 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:00:40.390 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:40.391 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 6.8596ms
+2025-08-18 17:00:40.420 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:00:40.421 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:00:40.422 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:40.423 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 2.4617ms
+2025-08-18 17:00:40.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:00:40.695 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:40.695 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:40.695 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:40.696 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:40.720 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:40.721 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5856ms
+2025-08-18 17:00:58.586 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:00:58.587 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:00:58.587 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:00:58.588 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:00:58.588 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:58.589 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:00:58.589 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:00:58.589 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:58.591 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 4.1934ms
+2025-08-18 17:00:58.697 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:00:58.697 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:00:58.698 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:00:58.698 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:00:58.698 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:58.699 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:00:58.700 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:00:58.700 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:58.700 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 3.3251ms
+2025-08-18 17:00:58.740 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:00:58.741 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:00:58.741 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:58.741 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.7769ms
+2025-08-18 17:00:59.008 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:00:59.008 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:59.008 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:59.008 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:00:59.009 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:00:59.014 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:00:59.015 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.9433ms
+2025-08-18 17:01:11.330 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:01:11.330 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:01:11.330 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:01:11.331 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:01:11.331 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:01:11.331 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:01:11.331 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:01:11.331 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:11.331 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 1.1949ms
+2025-08-18 17:01:11.357 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:01:11.357 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:01:11.357 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:11.358 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.7809ms
+2025-08-18 17:01:11.441 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:01:11.443 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:01:11.443 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:01:11.443 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:01:11.443 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:01:11.443 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:01:11.443 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:01:11.452 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:11.452 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.2796ms
+2025-08-18 17:01:27.259 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5238/api/AuthenticationDemo/DemoSeriLog - null 0
+2025-08-18 17:01:27.259 +07:00 [DBG] 2 candidate(s) found for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 17:01:27.260 +07:00 [DBG] Endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)' with route pattern 'api/AuthenticationDemo/DemoSeriLog' is valid for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 17:01:27.260 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/AuthenticationDemo/DemoSeriLog'
+2025-08-18 17:01:27.261 +07:00 [DBG] Request matched endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 17:01:27.261 +07:00 [DBG] The request has an origin header: 'http://localhost:5238'.
+2025-08-18 17:01:27.262 +07:00 [INF] CORS policy execution successful.
+2025-08-18 17:01:27.312 +07:00 [DBG] Entity Framework Core 9.0.7 initialized 'EbayContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.7' with options: EngineType=SqlServer 
+2025-08-18 17:01:27.322 +07:00 [DBG] Creating DbConnection.
+2025-08-18 17:01:27.323 +07:00 [DBG] Created DbConnection. (0ms).
+2025-08-18 17:01:27.323 +07:00 [DBG] Opening connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.324 +07:00 [DBG] Opened connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.324 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-08-18 17:01:27.324 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-08-18 17:01:27.325 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-08-18 17:01:27.326 +07:00 [DBG] Executing DbCommand [Parameters=[@__clientIp_0='?' (Size = 45), @__today_1='?' (DbType = DateTime), @__tomorrow_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[ConnectionCount], [c].[ConnectionTime], [c].[CreatedAt], [c].[IpAddress], [c].[UpdatedAt]
+FROM [ConnectionCountLog] AS [c]
+WHERE [c].[IpAddress] = @__clientIp_0 AND [c].[ConnectionTime] IS NOT NULL AND [c].[ConnectionTime] >= @__today_1 AND [c].[ConnectionTime] < @__tomorrow_2
+2025-08-18 17:01:27.337 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@__clientIp_0='?' (Size = 45), @__today_1='?' (DbType = DateTime), @__tomorrow_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[ConnectionCount], [c].[ConnectionTime], [c].[CreatedAt], [c].[IpAddress], [c].[UpdatedAt]
+FROM [ConnectionCountLog] AS [c]
+WHERE [c].[IpAddress] = @__clientIp_0 AND [c].[ConnectionTime] IS NOT NULL AND [c].[ConnectionTime] >= @__today_1 AND [c].[ConnectionTime] < @__tomorrow_2
+2025-08-18 17:01:27.338 +07:00 [DBG] Context 'EbayContext' started tracking 'ConnectionCountLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 17:01:27.339 +07:00 [DBG] Closing data reader to 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.339 +07:00 [DBG] A data reader for 'eBayDB' on server '103.97.125.207,1433' is being disposed after spending 2ms reading results.
+2025-08-18 17:01:27.339 +07:00 [DBG] Closing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.339 +07:00 [DBG] Closed connection to database 'eBayDB' on server '103.97.125.207,1433' (0ms).
+2025-08-18 17:01:27.339 +07:00 [DBG] SaveChanges starting for 'EbayContext'.
+2025-08-18 17:01:27.340 +07:00 [DBG] DetectChanges starting for 'EbayContext'.
+2025-08-18 17:01:27.340 +07:00 [DBG] The unchanged property 'ConnectionCountLog.ConnectionCount' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-08-18 17:01:27.341 +07:00 [DBG] An entity of type 'ConnectionCountLog' tracked by 'EbayContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 17:01:27.341 +07:00 [DBG] DetectChanges completed for 'EbayContext'.
+2025-08-18 17:01:27.344 +07:00 [DBG] Opening connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.345 +07:00 [DBG] Opened connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.345 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-08-18 17:01:27.345 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-08-18 17:01:27.346 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-08-18 17:01:27.346 +07:00 [DBG] Executing DbCommand [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [ConnectionCountLog] SET [ConnectionCount] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-08-18 17:01:27.357 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [ConnectionCountLog] SET [ConnectionCount] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-08-18 17:01:27.358 +07:00 [DBG] Closing data reader to 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.358 +07:00 [DBG] A data reader for 'eBayDB' on server '103.97.125.207,1433' is being disposed after spending 0ms reading results.
+2025-08-18 17:01:27.359 +07:00 [DBG] Closing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.360 +07:00 [DBG] Closed connection to database 'eBayDB' on server '103.97.125.207,1433' (0ms).
+2025-08-18 17:01:27.361 +07:00 [DBG] An entity of type 'ConnectionCountLog' tracked by 'EbayContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-08-18 17:01:27.361 +07:00 [DBG] SaveChanges completed for 'EbayContext' with 1 entities written to the database.
+2025-08-18 17:01:27.362 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-08-18 17:01:27.366 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-18 17:01:27.366 +07:00 [INF] Executing endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 17:01:27.379 +07:00 [INF] Route matched with {action = "DemoLog", controller = "AuthenticationDemo", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DemoLog() on controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api).
+2025-08-18 17:01:27.380 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-08-18 17:01:27.380 +07:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-08-18 17:01:27.380 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-08-18 17:01:27.380 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-08-18 17:01:27.380 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-08-18 17:01:27.381 +07:00 [DBG] Executing controller factory for controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api)
+2025-08-18 17:01:27.382 +07:00 [DBG] Executed controller factory for controller EbayProject.Api.Controllers.AuthenticationDemoController (EbayProject.Api)
+2025-08-18 17:01:27.386 +07:00 [INF] ::1 - truy cập
+2025-08-18 17:01:27.387 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-08-18 17:01:27.387 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-08-18 17:01:27.388 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-08-18 17:01:27.388 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-08-18 17:01:27.388 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-08-18 17:01:27.388 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-08-18 17:01:27.389 +07:00 [INF] Executed action EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api) in 8.5234ms
+2025-08-18 17:01:27.389 +07:00 [INF] Executed endpoint 'EbayProject.Api.Controllers.AuthenticationDemoController.DemoLog (EbayProject.Api)'
+2025-08-18 17:01:27.390 +07:00 [INF] HTTP POST /api/AuthenticationDemo/DemoSeriLog responded 200 in 23.2245 ms
+2025-08-18 17:01:27.390 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:27.391 +07:00 [DBG] 'EbayContext' disposed.
+2025-08-18 17:01:27.391 +07:00 [DBG] Disposing connection to database 'eBayDB' on server '103.97.125.207,1433'.
+2025-08-18 17:01:27.391 +07:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2025-08-18 17:01:27.391 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5238/api/AuthenticationDemo/DemoSeriLog - 200 null text/plain; charset=utf-8 132.5869ms
+2025-08-18 17:01:29.548 +07:00 [DBG] Connection id "0HNEU7O7IM3UB" received FIN.
+2025-08-18 17:01:29.549 +07:00 [DBG] Connection id "0HNEU7O7IM3UB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-18 17:01:29.550 +07:00 [DBG] Connection id "0HNEU7O7IM3UB" disconnecting.
+2025-08-18 17:01:29.554 +07:00 [DBG] Connection id "0HNEU7O7IM3UB" stopped.
+2025-08-18 17:01:32.315 +07:00 [DBG] Connection id "0HNEU7O7IM3UC" accepted.
+2025-08-18 17:01:32.315 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:01:32.315 +07:00 [DBG] Connection id "0HNEU7O7IM3UC" started.
+2025-08-18 17:01:32.316 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:01:32.316 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:01:32.316 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:01:32.316 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:01:32.317 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:01:32.317 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:01:32.317 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:32.318 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 2.4018ms
+2025-08-18 17:01:32.361 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:01:32.361 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:01:32.362 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:32.362 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 1.3122ms
+2025-08-18 17:01:32.734 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:01:32.734 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:01:32.734 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:01:32.734 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:01:32.734 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:01:32.744 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:01:32.745 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.0393ms
+2025-08-18 17:02:33.261 +07:00 [DBG] Connection id "0HNEU7O7IM3UC" received FIN.
+2025-08-18 17:02:33.263 +07:00 [DBG] Connection id "0HNEU7O7IM3UC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-18 17:02:33.263 +07:00 [DBG] Connection id "0HNEU7O7IM3UC" disconnecting.
+2025-08-18 17:02:33.264 +07:00 [DBG] Connection id "0HNEU7O7IM3UC" stopped.
+2025-08-18 17:02:50.754 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:02:50.754 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:02:50.754 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:02:50.754 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:02:50.754 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:02:50.756 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:02:50.756 +07:00 [DBG] Connection id "0HNEU7O7IM3UD" accepted.
+2025-08-18 17:02:50.757 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:02:50.757 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:02:50.757 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 3.1302ms
+2025-08-18 17:02:50.757 +07:00 [DBG] Connection id "0HNEU7O7IM3UD" started.
+2025-08-18 17:02:50.780 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:02:50.781 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:02:50.781 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:02:50.781 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.9863ms
+2025-08-18 17:02:50.858 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:02:50.858 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:02:50.858 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:02:50.858 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:02:50.858 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:02:50.862 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:02:50.862 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.4516ms
+2025-08-18 17:03:39.720 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:03:39.720 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:03:39.720 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:03:39.720 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:03:39.720 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:03:39.721 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:03:39.722 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:03:39.722 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:03:39.722 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 1.9259ms
+2025-08-18 17:03:39.757 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:03:39.758 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:03:39.758 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:03:39.758 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.3863ms
+2025-08-18 17:03:39.917 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:03:39.918 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:03:39.918 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:03:39.918 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:03:39.918 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:03:39.919 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:03:39.919 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:03:39.927 +07:00 [DBG] Connection id "0HNEU7O7IM3UA" completed keep alive response.
+2025-08-18 17:03:39.928 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.8962ms
+2025-08-18 17:04:03.441 +07:00 [DBG] Initializing Razor view compiler with compiled view: '/Pages/_Host.cshtml'.
+2025-08-18 17:04:03.523 +07:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-08-18 17:04:03.564 +07:00 [INF] User profile is available. Using 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 17:04:03.674 +07:00 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2025-08-18 17:04:03.675 +07:00 [DBG] Registered SignalR Protocol: blazorpack, implemented by Microsoft.AspNetCore.Components.Server.BlazorPack.BlazorPackHubProtocol.
+2025-08-18 17:04:03.778 +07:00 [DBG] Hosting starting
+2025-08-18 17:04:03.786 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-6beb3dba-f0b9-4788-a7ad-91ac7824012b.xml'.
+2025-08-18 17:04:03.787 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-c5f1c2cd-146a-4783-b530-685976f5df9f.xml'.
+2025-08-18 17:04:03.788 +07:00 [DBG] Reading data from file 'C:\Users\Khoi\AppData\Local\ASP.NET\DataProtection-Keys\key-f48ef8b0-fb3f-48b9-9eff-636ca32f3899.xml'.
+2025-08-18 17:04:03.793 +07:00 [DBG] Found key {6beb3dba-f0b9-4788-a7ad-91ac7824012b}.
+2025-08-18 17:04:03.798 +07:00 [DBG] Found key {c5f1c2cd-146a-4783-b530-685976f5df9f}.
+2025-08-18 17:04:03.799 +07:00 [DBG] Found key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899}.
+2025-08-18 17:04:03.806 +07:00 [DBG] Considering key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} with expiration date 2025-09-07 05:27:32Z as default key.
+2025-08-18 17:04:03.808 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-18 17:04:03.810 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-08-18 17:04:03.814 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-18 17:04:03.818 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-08-18 17:04:03.820 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-08-18 17:04:03.822 +07:00 [DBG] Using key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} as the default key.
+2025-08-18 17:04:03.824 +07:00 [DBG] Key ring with default key {f48ef8b0-fb3f-48b9-9eff-636ca32f3899} was loaded during application startup.
+2025-08-18 17:04:03.827 +07:00 [DBG] Middleware loaded
+2025-08-18 17:04:03.829 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16481 B).
+2025-08-18 17:04:03.831 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-08-18 17:04:03.908 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-08-18 17:04:03.914 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-08-18 17:04:03.916 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-08-18 17:04:03.941 +07:00 [INF] Now listening on: http://localhost:5238
+2025-08-18 17:04:03.941 +07:00 [DBG] Loaded hosting startup assembly EbayProject.Api
+2025-08-18 17:04:03.941 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-08-18 17:04:03.942 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 17:04:03.942 +07:00 [INF] Hosting environment: Development
+2025-08-18 17:04:03.942 +07:00 [INF] Content root path: C:\Study\EbayProject\EbayProject\EbayProject.Api
+2025-08-18 17:04:03.946 +07:00 [DBG] Hosting started
+2025-08-18 17:04:04.007 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" accepted.
+2025-08-18 17:04:04.007 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" started.
+2025-08-18 17:04:04.008 +07:00 [DBG] Connection id "0HNEU7Q7UD20B" accepted.
+2025-08-18 17:04:04.008 +07:00 [DBG] Connection id "0HNEU7Q7UD20B" started.
+2025-08-18 17:04:04.079 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:04:04.131 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:04:04.141 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:04:04.148 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:04:04.153 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:04:04.248 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:04:04.266 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:04:04.267 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:04:04.276 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 193.893ms
+2025-08-18 17:04:04.324 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:04:04.331 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:04:04.331 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:04:04.333 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 7.9406ms
+2025-08-18 17:04:04.431 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:04:04.433 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:04:04.434 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:04:04.434 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:04:04.434 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:04:04.450 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:04:04.451 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:04:04.588 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:04:04.589 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.1773ms
+2025-08-18 17:04:50.123 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:04:50.124 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:04:50.125 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:04:50.125 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:04:50.126 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:04:50.129 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:04:50.130 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:04:50.131 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:04:50.131 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 8.0821ms
+2025-08-18 17:04:50.171 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:04:50.173 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:04:50.173 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:04:50.174 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 2.5095ms
+2025-08-18 17:04:50.386 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:04:50.395 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:04:50.395 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:04:50.395 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:04:50.395 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:04:50.398 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:04:50.398 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:04:50.415 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:04:50.416 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.3869ms
+2025-08-18 17:05:05.782 +07:00 [DBG] Connection id "0HNEU7Q7UD20B" received FIN.
+2025-08-18 17:05:05.782 +07:00 [DBG] Connection id "0HNEU7Q7UD20B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-18 17:05:05.783 +07:00 [DBG] Connection id "0HNEU7Q7UD20B" disconnecting.
+2025-08-18 17:05:05.786 +07:00 [DBG] Connection id "0HNEU7Q7UD20B" stopped.
+2025-08-18 17:05:30.688 +07:00 [DBG] Connection id "0HNEU7Q7UD20C" accepted.
+2025-08-18 17:05:30.688 +07:00 [DBG] Connection id "0HNEU7Q7UD20C" started.
+2025-08-18 17:05:30.688 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:05:30.689 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:05:30.689 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:05:30.689 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:05:30.690 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:05:30.690 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:05:30.690 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:05:30.690 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:30.690 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 1.9041ms
+2025-08-18 17:05:30.721 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:05:30.722 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:05:30.722 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:30.722 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 1.1966ms
+2025-08-18 17:05:30.872 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:05:30.874 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:30.874 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:30.874 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:30.875 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:05:30.875 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:05:30.876 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:05:30.893 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:30.893 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5671ms
+2025-08-18 17:05:37.561 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:05:37.561 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:05:37.562 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:05:37.562 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:05:37.562 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:05:37.562 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:05:37.562 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:05:37.562 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:37.562 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 0.9613ms
+2025-08-18 17:05:37.580 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:05:37.581 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:05:37.581 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:37.581 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.2926ms
+2025-08-18 17:05:37.721 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:05:37.722 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:37.722 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:37.722 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:37.723 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:05:37.723 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:05:37.723 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:05:37.731 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:37.731 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.4652ms
+2025-08-18 17:05:40.331 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:05:40.331 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:05:40.331 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:05:40.331 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:05:40.331 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:05:40.332 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:05:40.332 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:05:40.332 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:40.332 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 1.0102ms
+2025-08-18 17:05:40.345 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:05:40.345 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:05:40.346 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:40.346 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.5995ms
+2025-08-18 17:05:40.463 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:05:40.465 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:40.465 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:40.465 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:05:40.465 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:05:40.465 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:05:40.465 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:05:40.477 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:05:40.478 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.9209ms
+2025-08-18 17:06:22.061 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:06:22.061 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:06:22.061 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:06:22.061 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:06:22.061 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:06:22.062 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:06:22.062 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:06:22.062 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:22.062 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 0.8345ms
+2025-08-18 17:06:22.088 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:06:22.088 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:06:22.088 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:22.088 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.6783ms
+2025-08-18 17:06:22.337 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:06:22.341 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:22.341 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:22.341 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:22.342 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:06:22.343 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:06:22.343 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:06:22.349 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:22.349 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.5611ms
+2025-08-18 17:06:45.887 +07:00 [DBG] Connection id "0HNEU7Q7UD20C" received FIN.
+2025-08-18 17:06:45.888 +07:00 [DBG] Connection id "0HNEU7Q7UD20C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-18 17:06:45.888 +07:00 [DBG] Connection id "0HNEU7Q7UD20C" disconnecting.
+2025-08-18 17:06:45.888 +07:00 [DBG] Connection id "0HNEU7Q7UD20C" stopped.
+2025-08-18 17:06:45.895 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:06:45.895 +07:00 [DBG] Connection id "0HNEU7Q7UD20D" accepted.
+2025-08-18 17:06:45.896 +07:00 [DBG] Connection id "0HNEU7Q7UD20D" started.
+2025-08-18 17:06:45.896 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:06:45.896 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:06:45.896 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:06:45.896 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:06:45.896 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:06:45.896 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:06:45.896 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:45.896 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 1.245ms
+2025-08-18 17:06:45.909 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:06:45.909 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:06:45.909 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:45.909 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.3098ms
+2025-08-18 17:06:46.080 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:06:46.082 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:46.082 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:46.082 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:46.082 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:06:46.083 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:06:46.083 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:06:46.090 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:46.090 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0877ms
+2025-08-18 17:06:50.535 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/index.html - null null
+2025-08-18 17:06:50.536 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-08-18 17:06:50.536 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-08-18 17:06:50.537 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-08-18 17:06:50.537 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:06:50.538 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-08-18 17:06:50.538 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-08-18 17:06:50.538 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:50.538 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/index.html - 200 null text/html;charset=utf-8 3.1923ms
+2025-08-18 17:06:50.561 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-18 17:06:50.561 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-08-18 17:06:50.561 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:50.561 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.5819ms
+2025-08-18 17:06:50.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - null null
+2025-08-18 17:06:50.697 +07:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:50.697 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:50.697 +07:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-08-18 17:06:50.698 +07:00 [DBG] Request did not match any endpoints
+2025-08-18 17:06:50.698 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:06:50.699 +07:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-18 17:06:50.723 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" completed keep alive response.
+2025-08-18 17:06:50.723 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5238/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.6766ms
+2025-08-18 17:08:56.908 +07:00 [DBG] Connection id "0HNEU7Q7UD20D" disconnecting.
+2025-08-18 17:08:56.908 +07:00 [DBG] Connection id "0HNEU7Q7UD20D" stopped.
+2025-08-18 17:08:56.909 +07:00 [DBG] Connection id "0HNEU7Q7UD20D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-18 17:09:01.954 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" disconnecting.
+2025-08-18 17:09:01.954 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" stopped.
+2025-08-18 17:09:01.954 +07:00 [DBG] Connection id "0HNEU7Q7UD20A" sending FIN because: "The Socket transport's send loop completed gracefully."

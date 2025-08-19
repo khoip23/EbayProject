@@ -2,19 +2,29 @@ using System.Net;
 using System.Security.Claims;
 using System.Text;
 using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components.Authorization;
 using EbayProject.Api.Helpers;
 using EbayProject.Api.Middleware;
 using EbayProject.Api.models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
+// Cấu hình Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug() // Mức log tối thiểu
+    .WriteTo.Console() // Ghi log ra console
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day) // Ghi log ra file theo ngày
+    .Enrich.FromLogContext() // Bổ sung thông tin context (RequestId, User, ...)
+    .CreateLogger();
 
+// Thay logger mặc định bằng Serilog
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.UseSerilog();
+ 
 //DI:
 //Service của blazor server app
 builder.Services.AddRazorPages();
@@ -25,32 +35,35 @@ builder.Services.AddServerSideBlazor();
 var privateKey = builder.Configuration["jwt:Serect-Key"];
 var Issuer = builder.Configuration["jwt:Issuer"];
 var Audience = builder.Configuration["jwt:Audience"];
+
 // Thêm dịch vụ Authentication vào ứng dụng, sử dụng JWT Bearer làm phương thức xác thực
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-{
-    // Thiết lập các tham số xác thực token
-    options.TokenValidationParameters = new TokenValidationParameters()
+builder
+    .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        // Kiểm tra và xác nhận Issuer (nguồn phát hành token)
-        ValidateIssuer = true,
-        ValidIssuer = Issuer, // Biến `Issuer` chứa giá trị của Issuer hợp lệ
-                              // Kiểm tra và xác nhận Audience (đối tượng nhận token)
-        ValidateAudience = true,
-        ValidAudience = Audience, // Biến `Audience` chứa giá trị của Audience hợp lệ
-                                  // Kiểm tra và xác nhận khóa bí mật được sử dụng để ký token
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(privateKey)),
-        // Sử dụng khóa bí mật (`privateKey`) để tạo SymmetricSecurityKey nhằm xác thực chữ ký của token
-        // Giảm độ trễ (skew time) của token xuống 0, đảm bảo token hết hạn chính xác
-        ClockSkew = TimeSpan.Zero,
-        // Xác định claim chứa vai trò của user (để phân quyền)
-        RoleClaimType = ClaimTypes.Role,
-        // Xác định claim chứa tên của user
-        NameClaimType = ClaimTypes.Name,
-        // Kiểm tra thời gian hết hạn của token, không cho phép sử dụng token hết hạn
-        ValidateLifetime = true
-    };
-});
+        // Thiết lập các tham số xác thực token
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            // Kiểm tra và xác nhận Issuer (nguồn phát hành token)
+            ValidateIssuer = true,
+            ValidIssuer = Issuer, // Biến `Issuer` chứa giá trị của Issuer hợp lệ
+            // Kiểm tra và xác nhận Audience (đối tượng nhận token)
+            ValidateAudience = true,
+            ValidAudience = Audience, // Biến `Audience` chứa giá trị của Audience hợp lệ
+            // Kiểm tra và xác nhận khóa bí mật được sử dụng để ký token
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(privateKey)),
+            // Sử dụng khóa bí mật (`privateKey`) để tạo SymmetricSecurityKey nhằm xác thực chữ ký của token
+            // Giảm độ trễ (skew time) của token xuống 0, đảm bảo token hết hạn chính xác
+            ClockSkew = TimeSpan.Zero,
+            // Xác định claim chứa vai trò của user (để phân quyền)
+            RoleClaimType = ClaimTypes.Role,
+            // Xác định claim chứa tên của user
+            NameClaimType = ClaimTypes.Name,
+            // Kiểm tra thời gian hết hạn của token, không cho phép sử dụng token hết hạn
+            ValidateLifetime = true,
+        };
+    });
 
 // Thêm dịch vụ Authorization để hỗ trợ phân quyền người dùng
 builder.Services.AddAuthorization();
@@ -69,68 +82,76 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 
     // 🔥 Thêm hỗ trợ Authorization header tất cả api
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Name = "Authorization",
-        Type = SecuritySchemeType.Http,
-        Scheme = "Bearer",
-        BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "Nhập token vào ô bên dưới theo định dạng: Bearer {token}"
-    });
+    options.AddSecurityDefinition(
+        "Bearer",
+        new OpenApiSecurityScheme
+        {
+            Name = "Authorization",
+            Type = SecuritySchemeType.Http,
+            Scheme = "Bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Description = "Nhập token vào ô bên dưới theo định dạng: Bearer {token}",
+        }
+    );
 
     // 🔥 Định nghĩa yêu cầu sử dụng Authorization trên từng api
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
+    options.AddSecurityRequirement(
+        new OpenApiSecurityRequirement
         {
-            new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference
+                new OpenApiSecurityScheme
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer",
+                    },
+                },
+                new string[] { }
             },
-            new string[] {}
         }
-    });
+    );
 });
 
 //ORM EF
 string connectionEbay = builder.Configuration.GetConnectionString("ConnectionStringEbay");
 
-builder.Services.AddDbContext<EbayContext>(options =>
-    options.UseSqlServer(connectionEbay));
+builder.Services.AddDbContext<EbayContext>(options => options.UseSqlServer(connectionEbay));
 
 //DI MIDDLE WARE
 builder.Services.AddScoped<BlockIpMiddleware>();
+
 //DI SERVICE CORS
 builder.Services.AddCors(option =>
 {
-    option.AddPolicy("allowLocalHost", builder =>
-    {
-        builder.WithOrigins("http://localhost:5238")
-            .AllowAnyHeader()
-            .WithMethods("GET", "POST") //chỉ cho phép get và post cho domain khác
-            .AllowCredentials();
-    });
+    option.AddPolicy(
+        "allowLocalHost",
+        builder =>
+        {
+            builder
+                .WithOrigins("http://localhost:5238")
+                .AllowAnyHeader()
+                .WithMethods("GET", "POST") //chỉ cho phép get và post cho domain khác
+                .AllowCredentials();
+        }
+    );
 });
 
 //Add http client
 builder.Services.AddHttpClient();
+
 //Add blazor storage
 builder.Services.AddBlazoredLocalStorage();
 
 //Custom phân quyền blazor page
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 
-
-
 var app = builder.Build();
 
 //MIDDLEWARE
 
-//Cấu hình middleware bắt lỗi error 
+//Cấu hình middleware bắt lỗi error
 app.UseExceptionHandler(appBuilder =>
 {
     appBuilder.Run(async context =>
@@ -140,13 +161,17 @@ app.UseExceptionHandler(appBuilder =>
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
         // Trả về JSON chứa thông tin lỗi
-        var errorResponse = new { message = exceptionFeature?.Error.Message ?? "Lỗi không xác định!" };
+        var errorResponse = new
+        {
+            message = exceptionFeature?.Error.Message ?? "Lỗi không xác định!",
+        };
         await context.Response.WriteAsJsonAsync(errorResponse);
     });
 });
 app.UseCors("allowLocalHost");
 app.UseSwagger();
 app.UseSwaggerUI();
+
 //SỬ DỤNG MIDDLE WARE TỰ TẠO
 app.UseMiddleware<BlockIpMiddleware>();
 app.MapControllers();
@@ -161,5 +186,8 @@ app.UseAuthorization(); //yêu cầu verify roles của token
 //Sử dụng middleware của blazor map file host để làm file chạy đầu tiên
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+
+//sử dụng middleware log seri
+app.UseSerilogRequestLogging();
 
 app.Run();

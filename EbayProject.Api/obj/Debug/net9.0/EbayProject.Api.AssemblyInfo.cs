@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EbayProject.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0864bd07e8a126359d8dc72ee641fcd2fad7ab1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+044313aabff534ffbda4181efe6bc11f326c6cc8")]
 [assembly: System.Reflection.AssemblyProductAttribute("EbayProject.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EbayProject.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

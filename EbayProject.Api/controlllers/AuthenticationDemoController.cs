@@ -10,13 +10,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+
 //using EbayProject.Api.Models;
 
 namespace EbayProject.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthenticationDemoController(EbayContext _context, JwtAuthService _jwt) : ControllerBase
+    public class AuthenticationDemoController(EbayContext _context, JwtAuthService _jwt)
+        : ControllerBase
     {
         [Authorize(Roles = "Admin")] //filter
         [HttpGet("getAllUser")]
@@ -29,7 +32,9 @@ namespace EbayProject.Api.Controllers
         public async Task<ActionResult> Register([FromBody] UserRegisterVM model)
         {
             //check email và username có tồn tại hay chưa ?
-            User userDB = _context.Users.SingleOrDefault(u => u.Username == model.UserName || u.Email == model.Email);
+            User userDB = _context.Users.SingleOrDefault(u =>
+                u.Username == model.UserName || u.Email == model.Email
+            );
             if (userDB != null)
             {
                 return BadRequest("Tài khoản đã tồn tại");
@@ -46,7 +51,7 @@ namespace EbayProject.Api.Controllers
             UserRole usRole = new UserRole();
             usRole.UserId = newUser.Id;
             usRole.RoleId = RoleId.Buyer;
-            newUser.UserRoles.Add(usRole); // Add tham chiếu liên table 
+            newUser.UserRoles.Add(usRole); // Add tham chiếu liên table
             _context.Users.Add(newUser);
             _context.SaveChanges();
             return Ok("Đăng ký thành công!");
@@ -56,7 +61,9 @@ namespace EbayProject.Api.Controllers
         public async Task<ActionResult> Login([FromBody] UserLoginVM model)
         {
             //B1: Verify password
-            User? us = _context.Users.SingleOrDefault(u => u.Email == model.userNameOrEmail || u.Username == model.userNameOrEmail);
+            User? us = _context.Users.SingleOrDefault(u =>
+                u.Email == model.userNameOrEmail || u.Username == model.userNameOrEmail
+            );
             if (us == null)
             {
                 return BadRequest("Tài khoản hoặc email không tồn tại!");
@@ -70,18 +77,21 @@ namespace EbayProject.Api.Controllers
             string token = _jwt.GenerateToken(us);
 
             //B2: Tạo token từ thông tin db
-            var res = new
-            {
-                token = token
-            };
-            //Cấp token qua cookie client 
-            HttpContext.Response.Cookies.Append("token", token, new CookieOptions()
-            {
-                Expires = DateTime.Now.AddDays(7),
-                HttpOnly = true,
-                Secure = true, //chỉ gửi cookie qua https
-                SameSite = SameSiteMode.Strict //Ngăn CSRF
-            });
+            var res = new { token = token };
+            //Cấp token qua cookie client
+            HttpContext.Response.Cookies.Append(
+                "token",
+                token,
+                new CookieOptions()
+                {
+                    Expires = DateTime.Now.AddDays(7),
+                    HttpOnly = true,
+                    Secure = true, //chỉ gửi cookie qua https
+                    SameSite =
+                        SameSiteMode.Strict //Ngăn CSRF
+                    ,
+                }
+            );
 
             return Ok(res);
         }
@@ -94,13 +104,14 @@ namespace EbayProject.Api.Controllers
 
             return Ok(cookie);
         }
+
         [HttpPost("DemoFilter")]
         [DemoFilter(name = "abc")]
         public IActionResult DemoFilter([FromBody] UserLoginVM model) //model binding
         {
             //Action excuting
 
-            //Action handler 
+            //Action handler
             Console.WriteLine($@"{JsonSerializer.Serialize(model)}");
 
             //Action excuted
@@ -114,13 +125,31 @@ namespace EbayProject.Api.Controllers
         {
             //Action excuting
 
-            //Action handler 
+            //Action handler
             Console.WriteLine($@"{JsonSerializer.Serialize(model)}");
 
             //Action excuted
             UserLoginVM res = model;
             return Ok(res);
         }
-    }
 
+        [HttpPost("DemoSeriLog")]
+        public async Task<IActionResult> DemoLog()
+        {
+            var IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+            var log = new LoggerConfiguration()
+                .WriteTo.File("Logs/log-action-demo.txt", rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+            Log.Information(@$"{IpAddress} - truy cập");
+            return Ok("ok");
+        }
+
+        [HttpPost("DemoSeriLogFilter")]
+        [TypeFilter(typeof(LogAttributeFilter))]
+        public IActionResult DemoSeriLogFilter()
+        {
+
+            return Ok("ok");
+        }
+    }
 }

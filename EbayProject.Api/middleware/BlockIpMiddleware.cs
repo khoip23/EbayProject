@@ -1,9 +1,9 @@
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using EbayProject.Api.models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 namespace EbayProject.Api.Middleware
 {
@@ -11,17 +11,14 @@ namespace EbayProject.Api.Middleware
     {
         private readonly EbayContext _contextDB;
 
-
         // ✅ Không cần RequestDelegate, chỉ inject những service cần thiết
         public BlockIpMiddleware(EbayContext context)
         {
             _contextDB = context ?? throw new ArgumentNullException(nameof(context));
-
         }
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
-
             // _logger.LogInformation("Middleware BlockIpMiddleware bắt đầu xử lý...");
 
             string clientIp = context.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
@@ -36,11 +33,12 @@ namespace EbayProject.Api.Middleware
             DateTime today = DateTime.Today;
             DateTime tomorrow = today.AddDays(1);
 
-            ConnectionCountLog? logCount = _contextDB.ConnectionCountLogs
-                .SingleOrDefault(n => n.IpAddress == clientIp &&
-                            n.ConnectionTime.HasValue &&
-                            n.ConnectionTime >= today &&
-                            n.ConnectionTime < tomorrow);
+            ConnectionCountLog? logCount = _contextDB.ConnectionCountLogs.SingleOrDefault(n =>
+                n.IpAddress == clientIp
+                && n.ConnectionTime.HasValue
+                && n.ConnectionTime >= today
+                && n.ConnectionTime < tomorrow
+            );
             if (logCount == null)
             {
                 var newLog = new ConnectionCountLog
@@ -48,10 +46,9 @@ namespace EbayProject.Api.Middleware
                     IpAddress = clientIp,
                     ConnectionTime = DateTime.Now,
                     CreatedAt = DateTime.Now,
-                    ConnectionCount = 1
+                    ConnectionCount = 1,
                 };
                 _contextDB.ConnectionCountLogs.Add(newLog);
-
             }
             else if (logCount.ConnectionCount > 2000)
             {

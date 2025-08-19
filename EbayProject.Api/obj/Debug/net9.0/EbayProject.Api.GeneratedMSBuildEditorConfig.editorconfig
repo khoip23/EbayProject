@@ -17,45 +17,45 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EbayProject.Api
 build_property.RootNamespace = EbayProject.Api
-build_property.ProjectDir = C:\Study\EbayProject\EbayProject.Api\
+build_property.ProjectDir = C:\Study\EbayProject\EbayProject\EbayProject.Api\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Study\EbayProject\EbayProject.Api
+build_property.MSBuildProjectDirectory = C:\Study\EbayProject\EbayProject\EbayProject.Api
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Study/EbayProject/EbayProject.Api/wwwroot/App.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/wwwroot/App.razor]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/wwwroot/_Imports.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/wwwroot/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/Pages/AdminPage.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/Pages/AdminPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/Pages/Index.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/Pages/LoginPage.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/Pages/LoginPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/Pages/Register.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/Pages/ViewPageBuyer.razor]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/Pages/ViewPageBuyer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1BhZ2VCdXllci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Study/EbayProject/EbayProject.Api/Pages/_Host.cshtml]
+[C:/Study/EbayProject/EbayProject/EbayProject.Api/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
